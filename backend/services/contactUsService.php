@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../dao/ContactUsDao.php';
+require_once __DIR__ . '/BaseService.php';
 
 class ContactUsService extends BaseService {
     public function __construct() {
