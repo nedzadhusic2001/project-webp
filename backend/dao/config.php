@@ -8,6 +8,11 @@ class Database {
     private static $password = 'rootroot';
     private static $connection = null;
 
+    public static function JWT_SECRET() {
+        return 'nisamjak123';
+    }
+
+
     public static function connect() {
         if (self::$connection === null) {
             try {
@@ -25,7 +30,7 @@ class Database {
                         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
                     ]);
                 } catch (PDOException $e) {
-                    die("❌ Connection failed via all methods. Check:<br>
+                    die(" Connection failed via all methods. Check:<br>
                         1. MAMP MySQL is running<br>
                         2. Password: 'rootroot'<br>
                         3. DB exists: 'webApp'<br>
